@@ -24,7 +24,7 @@ DIR* dp = opendir(".");
             fcount++;
             opendir(res->d_name);
             dfs();
-            closedir(&(res->d_name));
+            closedir(info.);
     	}
     	else{
             size+= info.st_size;
