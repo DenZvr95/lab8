@@ -22,16 +22,17 @@ DIR* dp = opendir(".");
     	if (S_ISDIR(info.st_mode)){
             cout << " DIR" <<  "\n";
             fcount++;
-            //opendir(res->d_name);
-            //dfs();
-            //closedir(info.);
-    	}
+            chdir(res->d_name);
+            dfs();
+            chdir("..");
+            }
     	else{
             size+= info.st_size;
             count++;
     	}
         cout << info.st_size<< " " << res->d_name << "\n";
 	}
+
     closedir(dp);
     }
 
