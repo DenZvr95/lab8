@@ -22,8 +22,8 @@ DIR* dp = opendir(".");
     	if (S_ISDIR(info.st_mode)){
             cout << " DIR" <<  "\n";
             fcount++;
-            opendir(res->d_name);
-            dfs();
+            //opendir(res->d_name);
+            //dfs();
             //closedir(info.);
     	}
     	else{
